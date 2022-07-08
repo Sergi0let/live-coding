@@ -1,0 +1,71 @@
+option,
+.navigation__select {
+  font-weight: 400;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.75em 0 1.5em 0;
+  @media (min-width: 600px) {
+    padding: 3.75em 0 2.5em 0;
+  }
+
+  &__title {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #030303;
+    @media (min-width: 600px) {
+      font-size: 1.75em;
+    }
+  }
+
+  &__container {
+    display: flex;
+  }
+
+  &__filter {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    font-size: 0.5em;
+    font-weight: 700;
+    color: #666;
+    text-transform: uppercase;
+    margin-bottom: 0.5em;
+    @media (min-width: 600px) {
+      margin-bottom: 0.81em;
+      font-size: 0.75em;
+    }
+  }
+
+  &__select {
+    border: none;
+    appearance: none;
+    background: url('//cdn.shopify.com/s/files/1/0938/8938/t/18/assets/ico-select.svg?v=1245925112819775442')
+      right center no-repeat;
+    padding-right: 0.75em;
+    cursor: pointer;
+    font-weight: 400;
+    line-height: 1;
+    @media (min-width: 600px) {
+      line-height: 1.375;
+      padding-right: 3.75em;
+    }
+  }
+
+  &__sort {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1em;
+    @media (min-width: 600px) {
+      margin-left: 2.25em;
+    }
+  }
+}
