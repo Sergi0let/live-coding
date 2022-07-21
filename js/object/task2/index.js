@@ -82,15 +82,25 @@ function compareObjects(obj1, obj2) {
 }
 */
 
-const objKeys = obj => Object.keys(obj);
-const entriesObj = obj => Object.entries(obj).flat();
+// const objKeys = obj => Object.keys(obj);
+// const entriesObj = obj => Object.entries(obj).flat();
+
+// function compareObjects(obj1, obj2) {
+//   if (objKeys(obj1).length !== objKeys(obj2).length) {
+//     return false;
+//   }
+
+//   return entriesObj(obj1).every(elem => entriesObj(obj2).includes(elem));
+// }
 
 function compareObjects(obj1, obj2) {
-  if (objKeys(obj1).length !== objKeys(obj2).length) {
+  const keysOne = Object.keys(obj1);
+
+  if (keysOne.length !== Object.keys(obj2).length) {
     return false;
   }
 
-  return entriesObj(obj1).every(elem => entriesObj(obj2).includes(elem));
+  return !keysOne.some(key => obj1[key] !== obj2[key]);
 }
 
 // // examples
